@@ -1,0 +1,28 @@
+<app-headbar></app-headbar>
+
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Tipo de Cliente -->
+      <h1 class="subtitle">
+        Selecione o tipo de cliente que deseja pesquisar
+      </h1>
+      <div class="field column is-one-fifth">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" ng-model="pesquisar" name="question" value="pf">
+            Pessoa Física
+          </label>
+          <label class="radio">
+            <input type="radio" ng-model="pesquisar" name="question" value="pj">
+            Pessoa Jurídica
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</section>
+<app-pesquisar-pf></app-pesquisar-pf>
+
+<app-footer></app-footer>

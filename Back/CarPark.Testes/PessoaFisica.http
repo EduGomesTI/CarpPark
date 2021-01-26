@@ -1,0 +1,68 @@
+GET http://localhost:5000/v1/PessoaFisica/cpf
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+GET http://localhost:5000/v1/PessoaFisica/nome
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+PUT http://localhost:5000/v1/PessoaFisica
+Content-Type: application/json
+
+{
+  "CPF": {
+    "documento": "271.144.988.29"
+  },
+  "NomeCompleto": {
+    "nome": "Eduardo",
+    "sobreNome": "Gomes"
+  },
+  "sexo": "M",
+  "DataNascimento": {
+    "Data": "1976-10-12"
+  },
+  "RG": {
+    "documento": "28.172.856-2"
+  },
+  "EnderecoId": 1,
+  "Endereco": {
+    "Logradouro": "Rua X",
+    "Numero": "123",
+    "Complemento": "apto 2",
+    "CEP": "34567-000",
+    "Bairro": "Centro",
+    "Cidade": "São Paulo",
+    "Estado": "SP"
+  },
+  "Telefones": [
+    {
+      "Numero": "11983459823"
+    },
+    {
+      "Numero": "11938445612"
+    },
+    {
+      "Numero": "1183459823"
+    }
+  ],
+  "Emails": [
+    {
+      "Endereco": "edugomesti@outlook.com"
+    },
+    {
+      "Endereco": "dudolino@gmail.com"
+    }
+  ]
+}
+
+###
