@@ -5,24 +5,68 @@
     <div class="container">
       <!-- Tipo de Cliente -->
       <h1 class="subtitle">
-        Selecione o tipo de cliente que deseja pesquisar
+        Selecione o campo que deseja pesquisar
       </h1>
-      <div class="field column is-one-fifth">
-        <div class="control">
-          <label class="radio">
-            <input type="radio" ng-model="pesquisar" name="question" value="pf">
-            Pessoa Física
-          </label>
-          <label class="radio">
-            <input type="radio" ng-model="pesquisar" name="question" value="pj">
-            Pessoa Jurídica
-          </label>
+      <div class="columns is-multiline is-vcentered">
+        <label class="radio column">
+          <input type="radio" ng-model="pesquisar" name="question" value="Nome">
+          Nome
+        </label>
+        <label class="radio column">
+          <input type="radio" ng-model="pesquisar" name="question" value="cpf">
+          CPF
+        </label>
+        <label class="radio column">
+          <input type="radio" ng-model="pesquisar" name="question" value="rg">
+          RG
+        </label>
+        <label class="radio column">
+          <input type="radio" ng-model="pesquisar" name="question" value="cnpj">
+          CNPJ
+        </label>
+        <label class="radio column">
+          <input type="radio" ng-model="pesquisar" name="question" value="razaoSocial">
+          Razão Social
+        </label>
+        <label class="radio column">
+          <input type="radio" ng-model="pesquisar" name="question" value="nomeFantasia">
+          Nome Fantasia
+        </label>
+      </div>
+      <div class="columns ">
+        <div class="column is-one-fifth">
+          <input type="text" class="input is-info" type="text" placeholder="">
+        </div>
+        <div class="column">
+          <button class="button button is-info is-light">Pesquisar</button>
         </div>
       </div>
+      <br>
+      <!-- Retorno da Pesquisa -->
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th class="has-text-centered">Nome/Razão</th>
+            <th class="has-text-centered">RG/NomeFanta</th>
+            <th class="has-text-centered">CPF?CNPJ</th>
+            <th class="has-text-centered">Editar</th>
+            <th class="has-text-centered">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="has-text-centered">Eduardo</td>
+            <td class="has-text-centered">28.172.856-2</td>
+            <td class="has-text-centered">271.144.988-29</td>
+            <td class="has-text-centered">editar</td>
+            <td class="has-text-centered">excluir</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <hr>
 </section>
-<app-pesquisar-pf></app-pesquisar-pf>
+<!-- <app-pesquisar-pf></app-pesquisar-pf> -->
 
 <app-footer></app-footer>
