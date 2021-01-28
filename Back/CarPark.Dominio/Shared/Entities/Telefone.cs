@@ -18,8 +18,10 @@ namespace CarPark.Dominio.Shared.Entities
 
         protected Telefone() { }
 
-        public Telefone(int telefoneId, string numero)
+        public Telefone(int telefoneId, string numero, int? pessoaFisicaId, int? pessoaJuridicaId)
         {
+            PessoaFisicaId = pessoaFisicaId;
+            PessoaJuridicaId = pessoaJuridicaId;
             TelefoneId = telefoneId;
             AlterarNumero(numero);
         }

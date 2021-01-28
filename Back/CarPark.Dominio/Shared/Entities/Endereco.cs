@@ -26,7 +26,8 @@ namespace CarPark.Dominio.Shared.Entities
         protected Endereco() { }
 
         [JsonConstructor]
-        public Endereco(int enderecoId, string logradouro, string numero, string complemento, string cep, string bairro, string cidade, string estado)
+        public Endereco(int enderecoId, string logradouro, string numero, string complemento, string cep, string bairro,
+            string cidade, string estado, int? pessoaFisicaId, int? pessoaJuridicaId)
         {
             EnderecoId = enderecoId;
             AlterarLogradouro(logradouro);
@@ -36,6 +37,8 @@ namespace CarPark.Dominio.Shared.Entities
             AlterarBairro(bairro);
             AlterarCidade(cidade);
             AlterarEstado(estado);
+            PessoaFisicaId = pessoaFisicaId;
+            PessoaJuridicaId = pessoaJuridicaId;
         }
 
         public bool AlterarLogradouro(string logradouro)

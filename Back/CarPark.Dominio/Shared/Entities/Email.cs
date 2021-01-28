@@ -18,8 +18,9 @@ namespace CarPark.Dominio.Shared.Entities
         protected Email() { }
 
         //Construtor para Método Put.
-        public Email(string enderecoEmail, int pessoaFisicaId, int pessoaJuridicaId)
+        public Email(int emailId, string enderecoEmail, int? pessoaFisicaId, int? pessoaJuridicaId)
         {
+            EmailId = emailId;
             AlterarEmail(enderecoEmail);
             PessoaFisicaId = pessoaFisicaId;
             PessoaJuridicaId = pessoaJuridicaId;
