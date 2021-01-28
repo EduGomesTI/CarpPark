@@ -1,16 +1,16 @@
 <section class="hero is-info is-fullheight">
   <div class="hero-body">
-    <div class="container column is-one-fifth">
-      <form action="">
-        <div class="column">
-          <h1 class="subtitle">Dados Cadastrais</h1>
-        </div>
+    <div class="container">
+      <h1 class="subtitle">Dados Cadastrais</h1>
+      <form [formGroup]="form">
         <!-- Nome -->
         <div class="column is-two-fifths">
           <div class="field">
             <label class="label">Nome</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Nome Completo">
+              <input class="input" type="text" placeholder="Nome Completo" formControlName="nome">
+              <span class="tag is-danger" *ngIf="!form.controls.nome.valid && !form.controls.nome.pristine">Nome
+                inválido</span>
             </div>
           </div>
         </div>
@@ -22,7 +22,9 @@
               <div class="field">
                 <label class="label">CPF</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="CPF">
+                  <input class="input" type="text" placeholder="CPF" formControlName="cpf">
+                  <span class="tag is-danger" *ngIf="!form.controls.cpf.valid && !form.controls.cpf.pristine">CPF
+                    inválido</span>
                 </div>
               </div>
             </div>
@@ -31,7 +33,9 @@
               <div class="field">
                 <label class="label">RG</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="RG">
+                  <input class="input" type="text" placeholder="RG" formControlName="rg">
+                  <span class="tag is-danger" *ngIf="!form.controls.rg.valid && !form.controls.rg.pristine">RG
+                    inválido</span>
                 </div>
               </div>
             </div>
@@ -45,18 +49,21 @@
               <div class="field">
                 <label class="label">Data de Nascimento</label>
                 <div class="control">
-                  <input class="input" type="date" placeholder="Data de Nascimento">
+                  <input class="input" type="date" placeholder="Data de Nascimento" formControlName="dataNascimento">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.dataNascimento.valid && !form.controls.dataNascimento.pristine">Data de
+                    Nascimento não pode
+                    ficar vazia</span>
                 </div>
               </div>
             </div>
-
             <!-- Sexo -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">Sexo</label>
                 <div class="control">
                   <label class="radio">
-                    <input type="radio" name="sexo">
+                    <input type="radio" name="sexo" formControlName="sexo">
                     Masculino
                   </label>
                   <label class="radio">
@@ -68,13 +75,10 @@
             </div>
           </div>
         </div>
-
         <hr>
-
         <div class="colum">
           <h1 class="subtitle">Endereço</h1>
         </div>
-
         <!-- Rua Número e Complemento -->
         <div class="colum">
           <div class="columns">
@@ -83,33 +87,36 @@
               <div class="field">
                 <label class="label">Logradouro</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Rua, Avenida, etc">
+                  <input class="input" type="text" placeholder="Rua, Avenida, etc" formControlName="logradouro">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.logradouro.valid && !form.controls.logradouro.pristine">Logradouro
+                    inválido</span>
                 </div>
               </div>
             </div>
-
             <!-- Número -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">Número</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Número">
+                  <input class="input" type="text" placeholder="Número" formControlName="numero">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.numero.valid && !form.controls.numero.pristine">Número
+                    inválido</span>
                 </div>
               </div>
             </div>
-
             <!-- Complemento -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">Complemento</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Complemento">
+                  <input class="input" type="text" placeholder="Complemento" formControlName="complenmento">
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Bairro CEP Cidade Estado -->
         <div class="colum">
           <div class="columns">
@@ -118,41 +125,48 @@
               <div class="field">
                 <label class="label">Bairro</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Bairro">
+                  <input class="input" type="text" placeholder="Bairro" formControlName="bairro">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.bairro.valid && !form.controls.bairro.pristine">Bairro
+                    inválido</span>
                 </div>
               </div>
             </div>
-
             <!-- CEP -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">CEP</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="CEP">
+                  <input class="input" type="text" placeholder="CEP" formControlName="cep">
+                  <span class="tag is-danger" *ngIf="!form.controls.cep.valid && !form.controls.cep.pristine">CEP
+                    inválido</span>
                 </div>
               </div>
             </div>
-
             <!-- Cidade -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">Cidade</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Cidade">
+                  <input class="input" type="text" placeholder="Cidade" formControlName="cidade">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.cidade.valid && !form.controls.cidade.pristine">Cidade
+                    inválida</span>
                 </div>
               </div>
             </div>
-
             <!-- Estado -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">Estado</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Estado">
+                  <input class="input" type="text" placeholder="Estado" formControlName="estado">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.estado.valid && !form.controls.estado.pristine">Estado
+                    inválido</span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <hr>
@@ -166,17 +180,16 @@
               <div class="field">
                 <label class="label">Telefone 1</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Fixo ou Celular">
+                  <input class="input" type="tel" placeholder="Fixo ou Celular" formControlName="telefone1">
                 </div>
               </div>
             </div>
-
             <!-- Celular -->
             <div class="column is-one-fifth">
               <div class="field">
                 <label class="label">Telefone 2</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Fixo ou Celular">
+                  <input class="input" type="tel" placeholder="Fixo ou Celular" formControlName="telefone2">
                 </div>
               </div>
             </div>
@@ -193,7 +206,10 @@
               <div class="field">
                 <label class="label">E-mail Pessoal</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="E-mail Pessoal">
+                  <input class="input" type="email" placeholder="E-mail Pessoal" formControlName="emailPessoal">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.emailPessoal.valid  && !form.controls.emailPessoal.pristine">E-mail
+                    inválido</span>
                 </div>
               </div>
             </div>
@@ -202,11 +218,18 @@
               <div class="field">
                 <label class="label">E-mail Corporativo</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="E-mail Corporativo">
+                  <input class="input" type="email" placeholder="E-mail Corporativo" formControlName="emailCorporativo">
+                  <span class="tag is-danger"
+                    *ngIf="!form.controls.emailCorporativo.valid && !form.controls.emailCorporativo.pristine">E-mail
+                    inválido</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="column">
+          <button (click)="submit()" class="button is-info is-inverted is-outlined is-large"
+            [disabled]="!form.valid">Cadastrar</button>
         </div>
       </form>
     </div>

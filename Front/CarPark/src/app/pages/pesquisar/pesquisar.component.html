@@ -7,40 +7,42 @@
       <h1 class="subtitle">
         Selecione o campo que deseja pesquisar
       </h1>
-      <div class="columns is-multiline is-vcentered">
-        <label class="radio column">
-          <input type="radio" ng-model="pesquisar" name="question" value="Nome">
-          Nome
-        </label>
-        <label class="radio column">
-          <input type="radio" ng-model="pesquisar" name="question" value="cpf">
-          CPF
-        </label>
-        <label class="radio column">
-          <input type="radio" ng-model="pesquisar" name="question" value="rg">
-          RG
-        </label>
-        <label class="radio column">
-          <input type="radio" ng-model="pesquisar" name="question" value="cnpj">
-          CNPJ
-        </label>
-        <label class="radio column">
-          <input type="radio" ng-model="pesquisar" name="question" value="razaoSocial">
-          Razão Social
-        </label>
-        <label class="radio column">
-          <input type="radio" ng-model="pesquisar" name="question" value="nomeFantasia">
-          Nome Fantasia
-        </label>
-      </div>
-      <div class="columns ">
-        <div class="column is-one-fifth">
-          <input type="text" class="input is-info" type="text" placeholder="">
+      <form>
+        <div class="columns is-multiline is-vcentered">
+          <label class="radio column">
+            <input type="radio" ng-model="pesquisar" name="question" value="Nome">
+            Nome
+          </label>
+          <label class="radio column">
+            <input type="radio" ng-model="pesquisar" name="question" value="cpf">
+            CPF
+          </label>
+          <label class="radio column">
+            <input type="radio" ng-model="pesquisar" name="question" value="rg">
+            RG
+          </label>
+          <label class="radio column">
+            <input type="radio" ng-model="pesquisar" name="question" value="cnpj">
+            CNPJ
+          </label>
+          <label class="radio column">
+            <input type="radio" ng-model="pesquisar" name="question" value="razaoSocial">
+            Razão Social
+          </label>
+          <label class="radio column">
+            <input type="radio" ng-model="pesquisar" name="question" value="nomeFantasia">
+            Nome Fantasia
+          </label>
         </div>
-        <div class="column">
-          <button class="button button is-info is-light">Pesquisar</button>
+        <div class="columns ">
+          <div class="column is-one-fifth">
+            <input type="text" class="input is-info" type="text" placeholder="">
+          </div>
+          <div class="column">
+            <button class="button button is-info is-light">Pesquisar</button>
+          </div>
         </div>
-      </div>
+      </form>
       <br>
       <!-- Retorno da Pesquisa -->
       <table class="table is-striped">

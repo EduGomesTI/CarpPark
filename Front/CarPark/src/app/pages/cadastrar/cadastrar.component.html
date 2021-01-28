@@ -1,1 +1,32 @@
-<p>cadastrar works!</p>
+<app-headbar></app-headbar>
+
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="columns is-half">
+      <form [formGroup]="formPessoa">
+        <p class="control">
+          <label class="radio">
+            <input type="radio" name="pessoa" value="pf" formControlName="pessoa">
+            Pessoa Física
+          </label>
+        </p>
+        <p class="control">
+          <label class="radio">
+            <input type="radio" name="pessoa" value="pj" formControlName="pessoa">
+            Pessoa Jurídica
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-info is-fullheigth">
+  <div class="hero-body">
+    <app-cadastrar-pf *ngIf="formPessoa.controls.pessoa.value == 'pf'"></app-cadastrar-pf>
+    <app-cadastrar-pj *ngIf="formPessoa.controls.pessoa.value == 'pj'"></app-cadastrar-pj>
+  </div>
+</section>
+
+
+<app-footer></app-footer>
